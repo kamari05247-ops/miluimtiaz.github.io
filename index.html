@@ -2,126 +2,142 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Milu Imtiaz | Digital Marketing Specialist</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milu Imtiaz | Portfolio</title>
 
-<!-- PREMIUM FONTS -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
+/* ================= ROOT COLORS ================= */
 :root{
-  --bg:#0b0b0d;
-  --soft-white:#e6e6e6;
-  --muted-white:#bdbdbd;
-  --accent:#7b5c87;
-  --border:#2a2a2e;
+  --bg:#0e0e11;
+  --text:#e2e2e2;
+  --muted:#b9b9b9;
+  --accent:#8a6aa3;
+  --border:#2b2b32;
 }
 
+/* ================= RESET ================= */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
+
+/* ================= BODY ================= */
 body{
   background:var(--bg);
-  color:var(--soft-white);
+  color:var(--text);
   font-family:'Inter',sans-serif;
   line-height:1.8;
 }
 
-/* ===== COMMON ===== */
+/* ================= COMMON ================= */
 .container{
   max-width:1200px;
   margin:auto;
-  padding:0 30px;
+  padding:0 24px;
 }
+
 .btn-group{
   display:flex;
-  gap:18px;
+  gap:16px;
   flex-wrap:wrap;
 }
+
 .btn{
-  padding:13px 32px;
+  padding:12px 30px;
   border:1px solid var(--accent);
   border-radius:40px;
-  color:var(--soft-white);
   text-decoration:none;
+  color:var(--text);
   font-size:14px;
-  transition:.3s;
+  transition:0.3s ease;
 }
+
 .btn:hover{
   background:var(--accent);
 }
 
-/* ===== TOP BAR ===== */
-.top-actions{
+/* ================= TOP BUTTONS ================= */
+.top-bar{
   padding:30px 0;
   border-bottom:1px solid var(--border);
 }
 
-/* ===== HERO ===== */
+/* ================= HERO ================= */
 .hero{
   min-height:85vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:50px;
-}
-.hero-text h1{
-  font-family:'Playfair Display',serif;
-  font-size:56px;
-  font-weight:600;
-  margin-bottom:25px;
-  opacity:0;
-  transform:translateY(30px);
-}
-.hero-text h2{
-  font-size:20px;
-  font-weight:500;
-  color:var(--muted-white);
-}
-.hero-text p{
-  margin-top:25px;
-  max-width:600px;
-  color:#cfcfcf;
-}
-.hero-img img{
-  width:320px;
-  border-radius:16px;
-  filter:grayscale(10%);
+  gap:40px;
 }
 
-/* ===== ABOUT ===== */
+.hero-text h1{
+  font-family:'Playfair Display',serif;
+  font-size:52px;
+  margin-bottom:22px;
+  opacity:0;
+  transform:translateY(25px);
+}
+
+.hero-text h2{
+  font-size:18px;
+  font-weight:500;
+  color:var(--muted);
+}
+
+.hero-text p{
+  margin-top:22px;
+  max-width:620px;
+  color:#cfcfcf;
+}
+
+.hero-img img{
+  width:300px;
+  border-radius:14px;
+  box-shadow:0 0 25px rgba(0,0,0,0.6);
+}
+
+/* ================= ABOUT ================= */
 .about{
   margin-top:100px;
   padding-top:80px;
   border-top:1px solid var(--border);
 }
+
 .about h3{
   font-family:'Playfair Display',serif;
-  font-size:38px;
-  margin-bottom:25px;
-}
-.about p{
-  max-width:850px;
-  color:#cfcfcf;
-  margin-bottom:20px;
+  font-size:36px;
+  margin-bottom:24px;
 }
 
-/* ===== BOTTOM BUTTONS ===== */
-.bottom-actions{
-  margin:100px 0;
+.about p{
+  max-width:900px;
+  margin-bottom:20px;
+  color:#cfcfcf;
+}
+
+/* ================= BOTTOM BUTTONS ================= */
+.bottom-bar{
+  margin:90px 0;
   display:flex;
   justify-content:center;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
+/* ================= RESPONSIVE ================= */
+@media (max-width:900px){
   .hero{
     flex-direction:column;
     text-align:center;
   }
-  .hero-text h1{
-    font-size:42px;
+  .hero-img img{
+    width:240px;
+  }
+  .btn-group{
+    justify-content:center;
   }
 }
 </style>
@@ -130,7 +146,7 @@ body{
 <body>
 
 <!-- ===== TOP BUTTONS ===== -->
-<div class="top-actions">
+<div class="top-bar">
   <div class="container btn-group">
     <a href="#" class="btn">Contact</a>
     <a href="#" class="btn">Client Work Proof</a>
@@ -138,10 +154,10 @@ body{
   </div>
 </div>
 
-<!-- ===== HERO ===== -->
+<!-- ===== HERO SECTION ===== -->
 <section class="hero container">
   <div class="hero-text">
-    <h1 id="title">Hello & Welcome</h1>
+    <h1 id="heroTitle">Hello & Welcome</h1>
 
     <h2>
       Hi, my name is Milu Imtiaz.  
@@ -150,7 +166,7 @@ body{
 
     <p>
       I am a professional freelancer working with clients all over the world.
-      I focus on clear communication, timely delivery, and long-term client satisfaction.
+      I focus on clear communication, timely delivery, and client satisfaction.
     </p>
   </div>
 
@@ -159,7 +175,7 @@ body{
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
+<!-- ===== ABOUT SECTION ===== -->
 <section class="about container">
   <h3>About Me</h3>
 
@@ -174,13 +190,13 @@ body{
   </p>
 
   <p>
-    My goal is to help brands grow with credibility, reach the right audience,
+    My mission is to help brands grow with credibility, reach the right audience,
     and achieve sustainable long-term success.
   </p>
 </section>
 
 <!-- ===== BOTTOM BUTTONS ===== -->
-<div class="bottom-actions">
+<div class="bottom-bar">
   <div class="btn-group">
     <a href="#" class="btn">Contact</a>
     <a href="#" class="btn">Client Work Proof</a>
@@ -189,12 +205,12 @@ body{
 </div>
 
 <script>
-window.onload = () => {
-  const t = document.getElementById("title");
-  t.style.opacity = "1";
-  t.style.transform = "translateY(0)";
-  t.style.transition = "1.8s ease";
-};
+window.addEventListener("load", function () {
+  var title = document.getElementById("heroTitle");
+  title.style.opacity = "1";
+  title.style.transform = "translateY(0)";
+  title.style.transition = "1.6s ease";
+});
 </script>
 
 </body>
