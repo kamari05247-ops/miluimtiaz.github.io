@@ -2,130 +2,126 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Milu Imtiaz | Portfolio</title>
+<title>Milu Imtiaz | Digital Marketing Specialist</title>
 
-<!-- GOOGLE FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<!-- PREMIUM FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
-/* ================= BASIC ================= */
+:root{
+  --bg:#0b0b0d;
+  --soft-white:#e6e6e6;
+  --muted-white:#bdbdbd;
+  --accent:#7b5c87;
+  --border:#2a2a2e;
+}
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
 }
 body{
-  background:#000;
-  color:#ededed;
-  overflow-x:hidden;
-}
-
-/* ================= HERO ================= */
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:80px;
-}
-.hero-text{
-  width:55%;
-}
-.hero-text h1{
-  font-size:68px;
-  font-weight:800;
-  color:#8E4585;
-  opacity:0;
-  transform:translateY(40px);
-}
-.hero-text h2{
-  margin-top:25px;
-  font-weight:600;
-  line-height:1.4;
-}
-.hero-text span{
-  color:#DCA1A1;
-}
-.hero-text p{
-  margin-top:25px;
+  background:var(--bg);
+  color:var(--soft-white);
+  font-family:'Inter',sans-serif;
   line-height:1.8;
-  color:#cfcfcf;
-  max-width:650px;
 }
 
-/* ================= IMAGE ================= */
-.hero-image{
-  width:40%;
+/* ===== COMMON ===== */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 30px;
+}
+.btn-group{
   display:flex;
-  justify-content:center;
-}
-.hero-image img{
-  width:320px;
-  border-radius:14px;
-  box-shadow:0 0 30px rgba(142,69,133,.45);
-  transition:.4s;
-}
-.hero-image img:hover{
-  transform:scale(1.05);
-}
-
-/* ================= ABOUT ================= */
-.about{
-  padding:90px 80px;
-  border-top:1px solid #4A4A4A;
-}
-.section-title{
-  font-size:44px;
-  margin-bottom:30px;
-  color:#8E4585;
-}
-.about p{
-  max-width:900px;
-  margin-bottom:22px;
-  line-height:1.9;
-  color:#d0d0d0;
-}
-
-/* ================= BUTTONS ================= */
-.buttons{
-  padding:70px 20px 100px;
-  display:flex;
-  justify-content:center;
-  gap:30px;
+  gap:18px;
+  flex-wrap:wrap;
 }
 .btn{
-  padding:15px 38px;
-  border:2px solid #8E4585;
-  color:#fff;
+  padding:13px 32px;
+  border:1px solid var(--accent);
+  border-radius:40px;
+  color:var(--soft-white);
   text-decoration:none;
-  border-radius:35px;
-  font-weight:500;
+  font-size:14px;
   transition:.3s;
 }
 .btn:hover{
-  background:#8E4585;
-  box-shadow:0 0 18px rgba(142,69,133,.6);
+  background:var(--accent);
 }
 
-/* ================= RESPONSIVE ================= */
+/* ===== TOP BAR ===== */
+.top-actions{
+  padding:30px 0;
+  border-bottom:1px solid var(--border);
+}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:50px;
+}
+.hero-text h1{
+  font-family:'Playfair Display',serif;
+  font-size:56px;
+  font-weight:600;
+  margin-bottom:25px;
+  opacity:0;
+  transform:translateY(30px);
+}
+.hero-text h2{
+  font-size:20px;
+  font-weight:500;
+  color:var(--muted-white);
+}
+.hero-text p{
+  margin-top:25px;
+  max-width:600px;
+  color:#cfcfcf;
+}
+.hero-img img{
+  width:320px;
+  border-radius:16px;
+  filter:grayscale(10%);
+}
+
+/* ===== ABOUT ===== */
+.about{
+  margin-top:100px;
+  padding-top:80px;
+  border-top:1px solid var(--border);
+}
+.about h3{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  margin-bottom:25px;
+}
+.about p{
+  max-width:850px;
+  color:#cfcfcf;
+  margin-bottom:20px;
+}
+
+/* ===== BOTTOM BUTTONS ===== */
+.bottom-actions{
+  margin:100px 0;
+  display:flex;
+  justify-content:center;
+}
+
+/* ===== RESPONSIVE ===== */
 @media(max-width:900px){
   .hero{
     flex-direction:column;
-    padding:60px 25px;
     text-align:center;
   }
-  .hero-text,.hero-image{
-    width:100%;
-  }
   .hero-text h1{
-    font-size:48px;
-  }
-  .about{
-    padding:70px 25px;
-  }
-  .buttons{
-    flex-direction:column;
+    font-size:42px;
   }
 }
 </style>
@@ -133,69 +129,72 @@ body{
 
 <body>
 
-<!-- ================= HERO SECTION ================= -->
-<section class="hero">
+<!-- ===== TOP BUTTONS ===== -->
+<div class="top-actions">
+  <div class="container btn-group">
+    <a href="#" class="btn">Contact</a>
+    <a href="#" class="btn">Client Work Proof</a>
+    <a href="#" class="btn">Payment Proof</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero container">
   <div class="hero-text">
-    <h1 id="heroTitle">Hello, Welcome</h1>
+    <h1 id="title">Hello & Welcome</h1>
 
     <h2>
-      Hi, My name is <span>Milu Imtiaz</span>.<br>
-      You can call me <span>Milu</span>.
+      Hi, my name is Milu Imtiaz.  
+      You can call me Milu.
     </h2>
 
     <p>
-      I am a professional freelancer. I work for clients all over the world.
-      I work hard for the satisfaction of my clients.
-      I complete projects before the deadline so my clients are happy to work with me.
-      And most of my clients tell me that they like my clear communication.
+      I am a professional freelancer working with clients all over the world.
+      I focus on clear communication, timely delivery, and long-term client satisfaction.
     </p>
   </div>
 
-  <div class="hero-image">
-    <!-- 👉 image path change korle hobe -->
+  <div class="hero-img">
     <img src="https://i.imgur.com/9QZ6Z9G.png" alt="Milu Imtiaz">
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section class="about">
-  <h2 class="section-title">Who I Am</h2>
+<!-- ===== ABOUT ===== -->
+<section class="about container">
+  <h3>About Me</h3>
 
   <p>
     I am a Google Certified Digital Marketing Specialist with over 3 years of hands-on experience
     delivering high-quality promotional and growth services across multiple digital platforms.
-    Throughout my career, I have successfully helped brands, content creators, and businesses
-    strengthen their online presence and reach their target audiences effectively.
   </p>
 
   <p>
-    My expertise spans major platforms including YouTube, Instagram, Facebook, TikTok,
-    Twitter (X), Spotify, SoundCloud, and Twitch. I specialize in designing tailored
-    marketing strategies that focus on real engagement, organic growth, and long-term results
-    not fake numbers or automated bots.
+    I specialize in real engagement, organic growth, and audience-focused strategies across
+    YouTube, Instagram, Facebook, TikTok, Twitter (X), Spotify, SoundCloud, and Twitch.
   </p>
 
   <p>
-    My goal is simple: to help my clients stand out in a competitive digital space,
-    build credibility, and achieve sustainable growth.
+    My goal is to help brands grow with credibility, reach the right audience,
+    and achieve sustainable long-term success.
   </p>
 </section>
 
-<!-- ================= BUTTONS ================= -->
-<section class="buttons">
-  <a href="#" class="btn">Contact Me</a>
-  <a href="#" class="btn">Client Work Proof</a>
-  <a href="#" class="btn">Payment Work Proof</a>
-</section>
+<!-- ===== BOTTOM BUTTONS ===== -->
+<div class="bottom-actions">
+  <div class="btn-group">
+    <a href="#" class="btn">Contact</a>
+    <a href="#" class="btn">Client Work Proof</a>
+    <a href="#" class="btn">Payment Proof</a>
+  </div>
+</div>
 
 <script>
-/* ================= ANIMATION ================= */
-window.addEventListener("load",()=>{
-  const title=document.getElementById("heroTitle");
-  title.style.opacity="1";
-  title.style.transform="translateY(0)";
-  title.style.transition="2s ease";
-});
+window.onload = () => {
+  const t = document.getElementById("title");
+  t.style.opacity = "1";
+  t.style.transform = "translateY(0)";
+  t.style.transition = "1.8s ease";
+};
 </script>
 
 </body>
